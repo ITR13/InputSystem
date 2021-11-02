@@ -135,6 +135,7 @@ namespace UnityEngine.InputSystem
 
             m_Asset = asset;
             m_ActionId = action.id.ToString();
+            name = GetNiceName(action);
 
             ////REVIEW: should this dirty the asset if IDs had not been generated yet?
         }
@@ -157,6 +158,19 @@ namespace UnityEngine.InputSystem
             }
 
             return base.ToString();
+        }
+
+        private static string GetNiceName(InputAction action)
+        {
+            return !string.IsNullOrEmpty(action?.actionMap?.name) ? $"{action.actionMap?.name}/{action.name}" : action?.name;
+        }
+
+        /// <summary>
+        /// Return a string representation useful for showing in UI.
+        /// </summary>
+        internal string ToNiceName()
+        {
+            return string.IsNullOrEmpty(name) ? GetNiceName(action) : name;
         }
 
         /// <summary>
