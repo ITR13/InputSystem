@@ -18,6 +18,7 @@ however, it has to be formatted properly to pass verification tests.
 
 - Fixed writing values into the half-axis controls of sticks (such as `Gamepad.leftStick.left`) producing incorrect values on the stick ([case 1336240](https://issuetracker.unity3d.com/issues/inputtestfixture-tests-return-inverted-values-when-pressing-gamepads-left-or-down-joystick-buttons)).
 - Fixed setting size of event trace in input debugger always growing back to largest size set before.
+- Fixed a device becoming `.current` (e.g. `Gamepad.current`, etc) when sending a new state event that contains no control changes (case 1377952).
 
 #### Actions
 
