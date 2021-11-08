@@ -126,5 +126,10 @@ namespace UnityEngine.InputSystem.iOS
     public class DualShock4GampadiOS : DualShockGamepad
     {
     }
+
+    [InputControlLayout(stateType = typeof(iOSGameControllerState), displayName = "iOS DualSense Gamepad")]
+    public class DualSenseGampadiOS : DualShockGamepad
+    {
+    }
 }
 #endif // UNITY_EDITOR || UNITY_IOS || UNITY_TVOS
