@@ -127,6 +127,9 @@ namespace UnityEngine.InputSystem.iOS
     {
     }
 
+    /// <summary>
+    /// A PlayStation DualSense controller connected to an iOS device.
+    /// </summary>
     [InputControlLayout(stateType = typeof(iOSGameControllerState), displayName = "iOS DualSense Gamepad")]
     public class DualSenseGampadiOS : DualShockGamepad
     {
